@@ -1,0 +1,60 @@
+
+//TYPOGRAPHY
+
+//family
+$ff-default : 'Overpass', sans-serif;
+
+//weight
+$fw-regular: 400;
+$fw-bold: 700;
+
+//spacing
+$ls-100: 0.25rem;
+
+
+//size
+
+//11px
+$fs-100: 0.69rem;
+
+//15px
+$fs-200: 0.94rem;
+
+//32px
+$fs-300: 1.75rem;
+
+
+//COLORS
+
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+//RESPONSIVITY
+
+//320px
+$w-mobile-small: 20rem;
+
+//375px
+$w-mobile: 23.44rem;
+
+//1440px
+$w-desktop: 90rem;
+
+//cards
+$w-card: 25rem;
+$h-card: $w-card;
+
+//SPACING - Padding - Margin - Gap - Radius
+
+$s-100: 0.5rem;
+$s-200: 1.5rem;
+$s-300: 2rem;
+$s-400: 3rem;
+$s-500: 4rem;
+
+//total rounded corners only
+$s-900: 100vh;

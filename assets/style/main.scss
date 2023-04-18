@@ -1,0 +1,188 @@
+@import 'fonts';
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: $ff-default;
+  color: $white;
+
+  background-color: $very-dark-blue;
+}
+
+input[type="radio"] {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  &:hover + label {
+    color: $white;
+    background-color: $medium-grey;
+  }
+
+  &:checked + label {
+    color: $white;
+    background-color: $orange;
+  }
+}
+
+.none{
+  display: none;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $s-400;
+  height: $s-400;
+
+  font-size: $fs-200;
+  font-weight: $fw-bold;
+  color: $light-grey;
+
+  background-color: lighten($color: $dark-blue, $amount: 10%);
+  border-radius: $s-200;
+}
+
+.title {
+  font-size: $fs-300;
+}
+
+.rated {
+  font-weight: inherit;
+}
+
+.copy {
+  color: $light-grey;
+  font-size: $fs-200;
+  font-weight: $fw-regular;
+
+  &.result {
+    padding: $s-100 $s-200;
+
+    color: $orange;
+    
+    background-color: lighten($color: $dark-blue, $amount: 10%);
+    border-radius: $s-300;
+  }
+}
+
+.page-content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  min-width: $w-mobile-small;
+  width: 100%;
+  max-width: $w-desktop;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: $w-card;
+  height: $h-card;
+  padding: $s-200;
+  gap: $s-200;
+  margin-bottom: $s-500;
+
+  background-color: $dark-blue;
+  border-radius: $s-200;
+
+  &.thanks {
+    align-items: center;
+
+    padding: $s-300;
+
+    .copy {
+      text-align: center;
+    }
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: $s-200;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+
+  gap: $s-200;
+  width: 100%;
+
+  .rating-options {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .circle {
+      cursor: pointer;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $s-400;
+  border: none;
+
+  font-family: $ff-default;
+  font-size: $fs-200;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: $ls-100;
+  color: $white;
+
+  background-color: $orange;
+  border-radius: $s-200;
+  cursor: pointer;
+
+  &:hover {
+    color: $orange;
+    background-color: $white;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  margin-bottom: 2em;
+
+  font-size: $fs-100;
+  text-align: center;
+
+  .link{
+    color: $light-grey;
+  }
+}

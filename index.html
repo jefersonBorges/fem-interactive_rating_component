@@ -2,48 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./assets/style/main.css">
+  <script src="./assets/script/main.js" defer></script>
+
 </head>
+
 <body>
+  <div class="page-content">
 
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
+    <main class="rating-page">
+      
+      <!-- Rating state start -->
+      <section id="rating" class="card rating">
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <article class="article">
+  
+          <div class="circle">
+            <img src="./assets/images/icon-star.svg" alt="icon star">
+          </div>
+  
+          <h1 class="title">How did we do?</h1>
+  
+          <p class="copy">
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+  
+        </article>
+        
+        <form id="rating_form" class="form">
+    
+          <div class="rating-options">
+            
+            <input type="radio" name="rating_value" id="rating_1" value="1">
+            <label class="circle" for="rating_1">1</label>
+  
+            <input type="radio" name="rating_value" id="rating_2" value="2">
+            <label class="circle" for="rating_2">2</label>
+  
+            <input type="radio" name="rating_value" id="rating_3" value="3">
+            <label class="circle" for="rating_3">3</label>
+
+            <input type="radio" name="rating_value" id="rating_4" value="4">
+            <label class="circle" for="rating_4">4</label>
+  
+            <input type="radio" name="rating_value" id="rating_5" value="5">
+            <label class="circle" for="rating_5">5</label>
+          
+          </div>
+        
+          <button id="submit_button" class="button" type="submit">Submit</button>
+    
+        </form>
+  
+      </section>
+      <!-- Rating state end -->
+  
+  
+      <!-- Thank you state start -->
+  
+      <article id="thanks" class="card thanks">
+  
+        <img src="./assets/images/illustration-thank-you.svg" alt="thank you illustration">
+  
+        <p class="copy result">
+          You selected <strong class="rated" id="rated">0</strong> out of 5
+        </p>
+      
+        <h2 class="title">Thank you!</h2>
+        
+        <p class="copy">
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don&#146;t hesitate to get in touch!
+        </p>
+  
+      </article>
+  
+      <!-- Thank you state end -->
+  
+    </main>
+  
+    <footer class="attribution">
+      Challenge by <a class="link" href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="link" href="https://www.frontendmentor.io/profile/jefersonBorges" target="_blank">Jeferson Borges</a>.
+    </footer>
+
   </div>
 </body>
 </html>

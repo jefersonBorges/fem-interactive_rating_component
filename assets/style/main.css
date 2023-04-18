@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Overpass";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 8%);
+}
+
+input[type=radio] {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+input[type=radio]:hover + label {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 54%);
+}
+input[type=radio]:checked + label {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+
+.none {
+  display: none;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: hsl(217, 12%, 63%);
+  background-color: #3a4655;
+  border-radius: 1.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+.rated {
+  font-weight: inherit;
+}
+
+.copy {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.94rem;
+  font-weight: 400;
+}
+.copy.result {
+  padding: 0.5rem 1.5rem;
+  color: hsl(25, 97%, 53%);
+  background-color: #3a4655;
+  border-radius: 2rem;
+}
+
+.page-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  min-width: 20rem;
+  width: 100%;
+  max-width: 90rem;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 25rem;
+  height: 25rem;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 1.5rem;
+}
+.card.thanks {
+  align-items: center;
+  padding: 2rem;
+}
+.card.thanks .copy {
+  text-align: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  width: 100%;
+}
+.form .rating-options {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form .rating-options .circle {
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border: none;
+  font-family: "Overpass", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.button:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 2em;
+  font-size: 0.69rem;
+  text-align: center;
+}
+.attribution .link {
+  color: hsl(217, 12%, 63%);
+}/*# sourceMappingURL=main.css.map */
