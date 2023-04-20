@@ -24,10 +24,12 @@ body {
   justify-content: center;
   align-content: center;
 
-  min-width: $w-mobile-small;
+  min-width: $w-mobile-max;
   width: 100%;
   max-width: $w-desktop;
   min-height: 100vh;
+
+  padding: 0 $s-200;
 }
 
 .card {
@@ -62,6 +64,12 @@ body {
   }
 }
 
+@media only screen and (max-width: $w-mobile) {
+  .card {
+    width: 100%;
+  }
+}
+
 input[type="radio"] {
   
   position: absolute;
@@ -74,8 +82,14 @@ input[type="radio"] {
     background-color: $medium-grey;
   }
 
-  &:checked + label {
+  &:focus-visible + label {
+    outline: -webkit-focus-ring-color auto 1px;
     color: $white;
+    background-color: $medium-grey; 
+  }
+
+  &:checked + label {
+  color: $white;
     background-color: $orange;
   }
 }
@@ -90,9 +104,9 @@ input[type="radio"] {
 
   font-size: $fs-200;
   font-weight: $fw-bold;
-  color: $light-grey;
+  color: $medium-grey;
 
-  background-color: lighten($color: $dark-blue, $amount: 5%);
+  background-color: lighten($color: $dark-blue, $amount: 4%);
   border-radius: $s-200;
 }
 
@@ -101,7 +115,7 @@ input[type="radio"] {
 }
 
 .copy {
-  color: $light-grey;
+  color: $medium-grey;
   font-size: $fs-200;
   font-weight: $fw-regular;
 
@@ -110,7 +124,7 @@ input[type="radio"] {
 
     color: $orange;
     
-    background-color: lighten($color: $dark-blue, $amount: 5%);
+    background-color: lighten($color: $dark-blue, $amount: 4%);
     border-radius: $s-300;
   }
 }

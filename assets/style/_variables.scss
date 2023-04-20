@@ -32,14 +32,16 @@ $light-grey: hsl(217, 12%, 63%);
 $medium-grey: hsl(216, 12%, 54%);
 $dark-blue: hsl(213, 19%, 18%);
 $very-dark-blue: hsl(216, 12%, 8%);
+ 
+
 
 //RESPONSIVITY
 
-//320px
-$w-mobile-small: 20rem;
-
 //375px
 $w-mobile: 23.44rem;
+
+//450px
+$w-mobile-max: 28.125rem;
 
 //1440px
 $w-desktop: 90rem;

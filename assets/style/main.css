@@ -23,10 +23,11 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
-  min-width: 20rem;
+  min-width: 28.125rem;
   width: 100%;
   max-width: 90rem;
   min-height: 100vh;
+  padding: 0 1.5rem;
 }
 
 .card {
@@ -51,12 +52,22 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 23.44rem) {
+  .card {
+    width: 100%;
+  }
+}
 input[type=radio] {
   position: absolute;
   width: 0;
   height: 0;
 }
 input[type=radio]:hover + label {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 54%);
+}
+input[type=radio]:focus-visible + label {
+  outline: -webkit-focus-ring-color auto 1px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(216, 12%, 54%);
 }
@@ -73,8 +84,8 @@ input[type=radio]:checked + label {
   height: 3rem;
   font-size: 0.94rem;
   font-weight: 700;
-  color: hsl(217, 12%, 63%);
-  background-color: #303a46;
+  color: hsl(216, 12%, 54%);
+  background-color: #2d3743;
   border-radius: 1.5rem;
 }
 
@@ -83,14 +94,14 @@ input[type=radio]:checked + label {
 }
 
 .copy {
-  color: hsl(217, 12%, 63%);
+  color: hsl(216, 12%, 54%);
   font-size: 0.94rem;
   font-weight: 400;
 }
 .copy.result {
   padding: 0.5rem 1.5rem;
   color: hsl(25, 97%, 53%);
-  background-color: #303a46;
+  background-color: #2d3743;
   border-radius: 2rem;
 }
 
