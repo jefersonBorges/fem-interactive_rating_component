@@ -16,66 +16,6 @@ body {
   background-color: $very-dark-blue;
 }
 
-input[type="radio"] {
-  position: absolute;
-
-  width: 0;
-  height: 0;
-
-  &:hover + label {
-    color: $white;
-    background-color: $medium-grey;
-  }
-
-  &:checked + label {
-    color: $white;
-    background-color: $orange;
-  }
-}
-
-.none{
-  display: none;
-}
-
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: $s-400;
-  height: $s-400;
-
-  font-size: $fs-200;
-  font-weight: $fw-bold;
-  color: $light-grey;
-
-  background-color: lighten($color: $dark-blue, $amount: 10%);
-  border-radius: $s-200;
-}
-
-.title {
-  font-size: $fs-300;
-}
-
-.rated {
-  font-weight: inherit;
-}
-
-.copy {
-  color: $light-grey;
-  font-size: $fs-200;
-  font-weight: $fw-regular;
-
-  &.result {
-    padding: $s-100 $s-200;
-
-    color: $orange;
-    
-    background-color: lighten($color: $dark-blue, $amount: 10%);
-    border-radius: $s-300;
-  }
-}
-
 .page-content {
   position: relative;
 
@@ -103,6 +43,12 @@ input[type="radio"] {
   margin-bottom: $s-500;
 
   background-color: $dark-blue;
+  background: radial-gradient(
+    circle calc($w-card/2) at center top,
+    lighten($color: $dark-blue, $amount:5%) 5%,
+    $dark-blue 100%
+  );
+
   border-radius: $s-200;
 
   &.thanks {
@@ -114,6 +60,63 @@ input[type="radio"] {
       text-align: center;
     }
   }
+}
+
+input[type="radio"] {
+  
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  
+  &:hover + label {
+    color: $white;
+    background-color: $medium-grey;
+  }
+
+  &:checked + label {
+    color: $white;
+    background-color: $orange;
+  }
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $s-400;
+  height: $s-400;
+
+  font-size: $fs-200;
+  font-weight: $fw-bold;
+  color: $light-grey;
+
+  background-color: lighten($color: $dark-blue, $amount: 5%);
+  border-radius: $s-200;
+}
+
+.title {
+  font-size: $fs-300;
+}
+
+.copy {
+  color: $light-grey;
+  font-size: $fs-200;
+  font-weight: $fw-regular;
+
+  &.result {
+    padding: $s-100 $s-200;
+
+    color: $orange;
+    
+    background-color: lighten($color: $dark-blue, $amount: 5%);
+    border-radius: $s-300;
+  }
+}
+
+.submitted-rating {
+  font-weight: inherit;
 }
 
 .article {

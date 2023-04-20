@@ -17,57 +17,6 @@ body {
   background-color: hsl(216, 12%, 8%);
 }
 
-input[type=radio] {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-input[type=radio]:hover + label {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(216, 12%, 54%);
-}
-input[type=radio]:checked + label {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(25, 97%, 53%);
-}
-
-.none {
-  display: none;
-}
-
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 0.94rem;
-  font-weight: 700;
-  color: hsl(217, 12%, 63%);
-  background-color: #3a4655;
-  border-radius: 1.5rem;
-}
-
-.title {
-  font-size: 1.75rem;
-}
-
-.rated {
-  font-weight: inherit;
-}
-
-.copy {
-  color: hsl(217, 12%, 63%);
-  font-size: 0.94rem;
-  font-weight: 400;
-}
-.copy.result {
-  padding: 0.5rem 1.5rem;
-  color: hsl(25, 97%, 53%);
-  background-color: #3a4655;
-  border-radius: 2rem;
-}
-
 .page-content {
   position: relative;
   display: flex;
@@ -91,6 +40,7 @@ input[type=radio]:checked + label {
   gap: 1.5rem;
   margin-bottom: 4rem;
   background-color: hsl(213, 19%, 18%);
+  background: radial-gradient(circle 12.5rem at center top, #303a46 5%, hsl(213, 19%, 18%) 100%);
   border-radius: 1.5rem;
 }
 .card.thanks {
@@ -99,6 +49,53 @@ input[type=radio]:checked + label {
 }
 .card.thanks .copy {
   text-align: center;
+}
+
+input[type=radio] {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+input[type=radio]:hover + label {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 54%);
+}
+input[type=radio]:checked + label {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: hsl(217, 12%, 63%);
+  background-color: #303a46;
+  border-radius: 1.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+.copy {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.94rem;
+  font-weight: 400;
+}
+.copy.result {
+  padding: 0.5rem 1.5rem;
+  color: hsl(25, 97%, 53%);
+  background-color: #303a46;
+  border-radius: 2rem;
+}
+
+.submitted-rating {
+  font-weight: inherit;
 }
 
 .article {
