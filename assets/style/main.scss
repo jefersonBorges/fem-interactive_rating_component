@@ -22,9 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center;
 
-  min-width: $w-mobile-max;
   width: 100%;
   max-width: $w-desktop;
   min-height: 100vh;
@@ -50,7 +48,6 @@ body {
     lighten($color: $dark-blue, $amount:5%) 5%,
     $dark-blue 100%
   );
-
   border-radius: $s-200;
 
   &.thanks {
@@ -64,7 +61,8 @@ body {
   }
 }
 
-@media only screen and (max-width: $w-mobile) {
+@media only screen and (max-width: $w-mobile-max) {
+  
   .card {
     width: 100%;
   }

@@ -22,8 +22,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  min-width: 28.125rem;
   width: 100%;
   max-width: 90rem;
   min-height: 100vh;
@@ -52,7 +50,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 23.44rem) {
+@media only screen and (max-width: 28.125rem) {
   .card {
     width: 100%;
   }
