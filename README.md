@@ -2,7 +2,9 @@
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI).
 
-Copy
+A simple challenge can always help to learn more. This time, the challenge was to improve accessibility without sacrificing the design.
+
+Any comments on the code are welcome!
 
 ## Table of contents
 
@@ -18,7 +20,6 @@ Copy
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -35,11 +36,14 @@ Users should be able to:
 
 #### Mobile
 
-![](./screenshot.jpg)
+![Mobile rating state screenshot](./design/mobile-rating-state-screenshot.jpeg)
+![Mobile thanks state screenshot](./design/mobile-thanks-state-screenshot.jpeg)
 
 #### Desktop
 
-![](./screenshot.jpg)
+![Desktop rating state screenshot](./design/desktop-rating-state-screenshot.jpeg)
+![Desktop active states screenshot](./design/desktop-active-states-screenshot.jpeg)
+![Desktop thanks state screenshot](./design/desktop-thanks-state-screenshot.jpeg)
 
 ### Links
 
@@ -57,50 +61,57 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Since the rating is info to be sent, I used a form with input type="radio". The solution to hide the box of the input but still be able to display the events of hover, focus and checked on it:
 
-To see how you can add code snippets, see below:
+```scss
+input[type="radio"] {
+  
+  position: absolute;
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+  width: 0;
+  height: 0;
+  
+  &:hover + label {
+    color: $white;
+    background-color: $medium-grey;
+  }
+
+  &:focus-visible + label {
+    outline: -webkit-focus-ring-color auto 1px;
+    color: $white;
+    background-color: $medium-grey; 
+  }
+
+  &:checked + label {
+  color: $white;
+    background-color: $orange;
+  }
 }
 ```
+
+The form is sent when the user clicks on the submit button or when the user hits key 'enter'. The solution I used here so there is no need to apply two events is as follows. This solution also binds the 'this' reference to the event, allowing the code to be cleaner.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+bind_events: function(){
+  this.$form_rating.onsubmit = this.submit_rating.bind(this)
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Page responsivity
+- Page accessibility
+- CSS best practices
+- Programming logic
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [26 Rules I Follow When Writing CSS To Make It Concise and Readable](https://arbaouimehdi.medium.com/26-rules-i-follow-when-writing-css-to-make-it-concise-and-readable-b56547a345b4) - This article is helping me better organize my CSS coding.
 
+- [Interactive controls are keyboard focusable](https://developer.chrome.com/docs/lighthouse/accessibility/focusable-controls/) - This article helping me better understand the focus indicator in the interactive elements on the page.
 
 ## Author
 
 - GitHub - [jefersonBorges](https://github.com/jefersonBorges/jefersonBorges)
 - Frontend Mentor - [@jefersonBorges](https://www.frontendmentor.io/profile/jefersonBorges)
 - Linkedin - [Jeferson Borges Linkedin](https://www.linkedin.com/in/jeferson-borges-543b34229)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
